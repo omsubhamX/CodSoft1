@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ola Electric - Drive the Future</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-image: url('olalineup.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: #000; 
+        }
+        header {
+            background: rgba(0, 128, 0, 0.8); 
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 0.5em 1em;
+            position: relative;
+        }
+        nav a:hover {
+            background: #388E3C;
+            border-radius: 5px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: #4CAF50;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background: #388E3C;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        section {
+            padding: 2em;
+            margin: 1em auto;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #1B5E20; 
+        }
+        section p {
+            font-size: 1.2em;
+            line-height: 1.6em;
+        }
+        .button {
+            display: inline-block;
+            padding: 1em 2em;
+            margin: 1em 0;
+            background: #4CAF50; 
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #388E3C; 
+        }
+        .features, .products, .testimonials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .feature, .product, .testimonial {
+            flex: 1;
+            margin: 1em;
+            padding: 1em;
+            background: rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .product img {
+            width: 100%;
+            max-width: 300px; 
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto;
+        }
+        .testimonial img {
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1em auto;
+        }
+        footer {
+            background: rgba(0, 128, 0, 0.8); 
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+        @media (max-width: 768px) {
+            .features, .products, .testimonials {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature, .product, .testimonial {
+                flex: none;
+                width: 90%;
+                margin: 1em 0;
+            }
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ola Electric</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#why-choose">Why Choose</a>
+            <div class="dropdown">
+                <a href="#vehicles">Vehicles</a>
+                <div class="dropdown-content">
+                    <a href="#s1-pro">Ola S1 Pro</a>
+                    <a href="#s1">Ola S1</a>
+                </div>
+            </div>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>Revolutionize Your Ride with Ola Electric</h2>
+        <p>Experience the next generation of electric vehicles designed for sustainability and performance.</p>
+        <a href="#" class="button">Shop Now</a>
+        <a href="#" class="button">Learn More</a>
+    </section>
+    <section id="why-choose">
+        <h2>Why Choose Ola Electric?</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Innovative Design</h3>
+                <p>Sleek, modern aesthetics and ergonomically designed for comfort.</p>
+            </div>
+            <div class="feature">
+                <h3>Powerful Performance</h3>
+                <p>High torque motors for instant acceleration and long-lasting battery life for extended rides.</p>
+            </div>
+            <div class="feature">
+                <h3>Smart Technology</h3>
+                <p>Integrated GPS and navigation, smart app connectivity for seamless control.</p>
+            </div>
+            <div class="feature">
+                <h3>Eco-Friendly</h3>
+                <p>Zero emissions, reducing your carbon footprint. Sustainable materials and production methods.</p>
+            </div>
+        </div>
+    </section>
+    <section id="vehicles">
+        <h2>Our Electric Vehicles</h2>
+        <div class="products">
+            <div class="product" id="s1-pro">
+                <img src="olared.jpeg" alt="Ola S1 Pro">
+                <h3>Ola S1 Pro</h3>
+                <p>Top Speed: 115 km/h</p>
+                <p>Range: 181 km</p>
+                <p>Charge Time: 18 minutes for 75 km</p>
+            </div>
+            <div class="product" id="s1">
+                <img src="olayellow.jpg" alt="Ola S1">
+                <h3>Ola S1</h3>
+                <p>Top Speed: 90 km/h</p>
+                <p>Range: 121 km</p>
+                <p>Charge Time: 18 minutes for 75 km</p>
+            </div>
+        </div>
+        <a href="#" class="button">View All Models</a>
+    </section>
+    <section id="testimonials">
+        <h2>Hear from Our Satisfied Riders</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="AMAN.jpg" alt="John Doe">
+                <p><strong>Aman:</strong> "The Ola S1 Pro has transformed my daily commute. It’s fast, efficient, and I love knowing I’m helping the environment."</p>
+            </div>
+            <div class="testimonial">
+                <img src="ram.jpg" alt="Jane Smith">
+                <p><strong>Ram:</strong> "I’ve been using my Ola S1 for over a year, and it’s been nothing short of amazing. The smart features are incredibly convenient."</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Ready to Join the Electric Revolution?</h2>
+        <a href="#" class="button">Get Started Today</a>
+    </section>
+    <footer>
+        <p>Follow Us on Social Media:</p>
+        <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">LinkedIn</a>
+        </p>
+        <p>Contact Us: support@olaelectric.com | 1-800-OLA-HELP</p>
+        <p>
+            <a href="#">About Us</a> |
+        </p>
+    </footer>
+</body>
+</html>
